@@ -1,0 +1,23 @@
+name: Monthly dependency review
+on:
+  schedule:
+    - cron: '17 9 1 * *'
+  workflow_dispatch:
+permissions: {}
+concurrency: monthly-dependency-review
+jobs:
+  remind:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions: {issues: write}
+    steps:
+      - name: Open one tracking issue per month
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          title="Dependency maintenance: $(date -u +%Y-%m)"
+          if ! gh issue list -R "$REPO" --state all --search "\"$title\" in:title" --json title > "$RUNNER_TEMP/monthly.json"; then exit 1; fi
+          if ! jq -e --arg title "$title" 'any(.[]; .title == $title)' "$RUNNER_TEMP/monthly.json" >/dev/null; then
+            gh issue create -R "$REPO" --title "$title" --body 'Follow the [maintenance checklist](https://github.com/erp4us-org/.github/blob/main/docs/dependency-maintenance.md). Record reviewed repositories, grouped regular update PRs, verification and deferrals. Keep sensitive infrastructure details private. Critical security fixes do not wait for this review.'
+          fi

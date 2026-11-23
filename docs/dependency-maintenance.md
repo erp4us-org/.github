@@ -1,0 +1,17 @@
+# Dependency maintenance
+
+The bootstrap maintainer owns triage until someone explicitly takes the monthly issue. Dependabot Alerts and Security Updates stay on in each repository. Each configured ecosystem has `open-pull-requests-limit: 0` (version PRs only) and a `groups` rule with `applies-to: security-updates`. The schedule is a required configuration field, not the security response cadence. Where an ecosystem cannot generate security PRs, triage alerts and upstream advisories manually. Do not enable repository auto-merge, bots that approve or merge updates, or unconditional update commands.
+
+## Respond now to critical findings
+
+Check the affected range, actual locked version/image digest, exploitability and available fixes immediately. Isolate the smallest security change in a PR; split it from a group if unrelated or breaking updates would delay remediation. Document mitigations when no fix exists. Use private reporting for sensitive details. Never dismiss an alert or relax a gate merely to merge. A reviewer must confirm the corrected artifact and rerun the relevant tests. Do not wait for the monthly window.
+
+## Monthly maintainer checklist
+
+Use one tracking issue in the public `.github` repository each month. Link public PRs there; keep private findings, infrastructure inventories and remediation details in the private repository. Handle security PRs separately even if their titles look like regular bumps.
+
+1. Inspect open **and recently resolved** alerts, scanner findings, upstream support windows, lockfiles, pinned Actions, container digests and open dependency PRs. Record date, owner and which repositories were checked; no sensitive payloads.
+2. Group *regular* upgrades by compatibility and rollback boundary, not by bot or arbitrary count: e.g. Angular + supported TypeScript; Astro + site tooling; Rust libraries; Python contract tools; Actions; base image and DB compatibility. One repository per PR. Separate a breaking runtime/database upgrade or unrelated license change. Never catch up by merging individual stale bot PRs blindly.
+3. For each group list old/new versions and reason, release notes and advisories, minimum supported runtime/toolchain, direct/transitive license or notice changes, deprecated APIs, storage/contract migrations and rollback/restore plan. Escalate policy or architecture changes to maintainers. Verify proposed pins and provenance against upstream; keep SHA-pinned Actions and image digests. Update existing lockfiles with their native tool and review the diff. Use `cargo --locked` and `npm ci` for verification; no unreviewed `audit fix --force`.
+4. Run all repository CI and relevant negative/replay/restore checks. Application: Rust fmt/Clippy/tests, cargo-audit, cargo-deny, contracts/requirements, npm audit/build/browser tests and Trivy runtime scan. Website: npm audit, format, catalog lint, type check, build and links; deploy only after main validation. Infra: offline runbook checks and Trivy misconfiguration checks when real IaC exists. Community: template and link checks. No public CI on deployment hosts.
+5. A maintainer checks the evidence, merges manually and observes post-merge CI/deployment. Record decisions, follow-ups, or a deliberate no-update month. A finding without a fix needs an owner, impact, compensating control and review date; do not grant blanket exceptions. Defer unrelated PRs rather than bypassing failed gates.
