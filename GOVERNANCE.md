@@ -1,0 +1,3 @@
+# Governance and RFCs
+
+The bootstrap maintainer triages and records decisions. [Application governance](https://github.com/erp4us-org/erp4us/blob/main/GOVERNANCE.md) governs application changes. For a cross-repository proposal, open a Discussion describing the problem, affected users, alternatives, compatibility, security and acceptance criteria. Invite affected contributors to comment. Record acceptance, deferral or rejection with reasons; link an accepted decision from the owning repo and record architecture decisions as ADRs. Maintainer approval is needed before changing trust boundaries, branding, licensing or spending money.

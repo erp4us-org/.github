@@ -1,0 +1,3 @@
+# Contributing
+
+Start in [Discussions](https://github.com/erp4us-org/erp4us/discussions) with a question or example, or choose a focused issue. No programming experience is required. Use English for project materials and fictional or anonymized examples. Identify the affected repository and check existing work before starting. For implementation submit focused PRs, describe verification and limitations, and sign off each contribution commit with `git commit -s` under [DCO 1.1](https://developercertificate.org/). First-party project materials use Apache-2.0. Follow the [Code of Conduct](CODE_OF_CONDUCT.md) and any local repository instructions.

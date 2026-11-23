@@ -1,0 +1,1 @@
+Write in English, use lowercase erp4us, check the application roadmap before making capability claims, and keep policies compatible with the main repository. Preview changed templates, verify links, and record the result in the PR. No changes to governance or brand selection without maintainer approval.
