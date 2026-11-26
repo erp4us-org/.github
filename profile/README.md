@@ -8,10 +8,12 @@ Businesses of different sizes, industries and countries should be able to run th
 
 **Early development:** the local Rust Master Data service stores and retrieves articles in MongoDB. Independent services own their rules and data and integrate through published contracts. A browser shell, durable events and an order-to-procurement workflow are roadmap goals.
 
-[Website](https://erp4us-org.github.io/) · Official domain: `erp4us.org` · [Application](https://github.com/erp4us-org/erp4us) · [Roadmap](https://github.com/erp4us-org/erp4us/blob/main/ROADMAP.md) · [Discussions](https://github.com/erp4us-org/erp4us/discussions)
+[Website](https://erp4us-org.github.io/) · Official domain: `erp4us.org` · [Application](https://github.com/erp4us-org/erp4us) · [Roadmap](https://github.com/erp4us-org/erp4us/blob/main/ROADMAP.md)
 
 ## Take part
 
-Start with a question: a customer orders ten units but only six are available. [Tell us what happens in your business](https://github.com/erp4us-org/erp4us/issues/16), using fictional examples. ERP specialists, business users and industry experts can contribute requirements without writing code. UI/UX designers, translators and documentation contributors can [pick a first issue](https://github.com/erp4us-org/erp4us/issues?q=is%3Aopen+label%3A%22good+first+issue%22). Software developers, security specialists and infrastructure engineers can review the architecture, contracts and recovery assumptions.
+[Join the discussion](https://github.com/erp4us-org/erp4us/discussions) · [Share your industry knowledge](https://github.com/erp4us-org/erp4us/blob/main/CONTRIBUTING.md#share-industry-knowledge) · [Suggest a business requirement](https://github.com/erp4us-org/erp4us/discussions/new/choose) · [Contribute to erp4us](https://github.com/erp4us-org/erp4us/blob/main/CONTRIBUTING.md)
+
+Start with a question: a customer orders ten units but only six are available. How does your business decide what to ship? Share a fictional example; no code or technical design is required. English is our primary language, but other languages are welcome. Designers, translators and documentation contributors can also [pick a first issue](https://github.com/erp4us-org/erp4us/issues?q=is%3Aopen+label%3A%22good+first+issue%22). Software developers, security specialists and infrastructure engineers can review the architecture, contracts and recovery assumptions.
 
 Built together. Open by design.
