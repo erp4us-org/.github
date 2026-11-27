@@ -12,7 +12,7 @@ Businesses of different sizes, industries and countries should be able to run th
 
 ## Take part
 
-[Join the discussion](https://github.com/erp4us-org/erp4us/discussions) · [Share your industry knowledge](https://github.com/erp4us-org/erp4us/blob/main/CONTRIBUTING.md#share-industry-knowledge) · [Suggest a business requirement](https://github.com/erp4us-org/erp4us/discussions/new/choose) · [Contribute to erp4us](https://github.com/erp4us-org/erp4us/blob/main/CONTRIBUTING.md)
+[Join the discussion](https://github.com/erp4us-org/erp4us/discussions) · [Share your industry knowledge](https://github.com/erp4us-org/erp4us/blob/main/docs/requirements/guide.md#working-agreement) · [Suggest a business requirement](https://github.com/erp4us-org/erp4us/discussions/new/choose) · [Contribute to erp4us](https://github.com/erp4us-org/erp4us/blob/main/CONTRIBUTING.md)
 
 Start with a question: a customer orders ten units but only six are available. How does your business decide what to ship? Share a fictional example; no code or technical design is required. English is our primary language, but other languages are welcome. Designers, translators and documentation contributors can also [pick a first issue](https://github.com/erp4us-org/erp4us/issues?q=is%3Aopen+label%3A%22good+first+issue%22). Software developers, security specialists and infrastructure engineers can review the architecture, contracts and recovery assumptions.
 
