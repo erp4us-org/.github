@@ -6,6 +6,8 @@
 
 Businesses of different sizes, industries and countries should be able to run their own software and extend it without surrendering their data. We are building toward an industry-neutral platform where people and authorized agents use the same business operations.
 
+ERP4us will always be free to use and self-host, including for businesses. There will never be a paid Enterprise edition. No ERP4us features will be reserved for paying customers. If you choose a hosting provider, its usual hosting costs may apply.
+
 **Early development:** the local Rust Master Data service stores and retrieves articles in MongoDB. Independent services own their rules and data and integrate through published contracts. A browser shell, durable events and an order-to-procurement workflow are roadmap goals.
 
 [Website](https://erp4us-org.github.io/) · Official domain: `erp4us.org` · [Application](https://github.com/erp4us-org/erp4us) · [Roadmap](https://github.com/erp4us-org/erp4us/blob/main/ROADMAP.md)
